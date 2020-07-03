@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/et"
+        android:drawableLeft="@drawable/ic_location_on_black_24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cameraBearing="12.0"
+            app:cameraTargetLat="21.0"
+            app:cameraTargetLng="78.0"
+            app:cameraTilt="12.0"
+            app:cameraZoom="2.0"
+            app:mapType="hybrid"
+
+            app:uiCompass="true"
+            app:uiRotateGestures="true"
+            app:uiScrollGestures="true"
+            app:uiTiltGestures="true"
+            app:uiZoomControls="true"
+            app:uiZoomGestures="true"
+            tools:context=".MapsActivity" />
+    </FrameLayout>
+
+
+</LinearLayout>
